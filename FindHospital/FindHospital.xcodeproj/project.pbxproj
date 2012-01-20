@@ -14,6 +14,9 @@
 		6C51169014C7CC4D00BB552D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C51168F14C7CC4D00BB552D /* main.m */; };
 		6C51169414C7CC4D00BB552D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C51169314C7CC4D00BB552D /* AppDelegate.m */; };
 		6C51169714C7CC4D00BB552D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C51169514C7CC4D00BB552D /* MainStoryboard.storyboard */; };
+		6C842A3014C7E166003C7DDA /* HospitalsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C842A2F14C7E166003C7DDA /* HospitalsController.m */; };
+		6C842A3514C7F00A003C7DDA /* Hospital.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C842A3414C7F00A003C7DDA /* Hospital.m */; };
+		6C842A6A14C802CD003C7DDA /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C842A6914C802CD003C7DDA /* Position.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,12 @@
 		6C51169214C7CC4D00BB552D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6C51169314C7CC4D00BB552D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6C51169614C7CC4D00BB552D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		6C842A2E14C7E166003C7DDA /* HospitalsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalsController.h; sourceTree = "<group>"; };
+		6C842A2F14C7E166003C7DDA /* HospitalsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalsController.m; sourceTree = "<group>"; };
+		6C842A3314C7F00A003C7DDA /* Hospital.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hospital.h; sourceTree = "<group>"; };
+		6C842A3414C7F00A003C7DDA /* Hospital.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hospital.m; sourceTree = "<group>"; };
+		6C842A6814C802CD003C7DDA /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
+		6C842A6914C802CD003C7DDA /* Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Position.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +86,7 @@
 				6C5116A214C7CC8B00BB552D /* Models */,
 				6C5116A114C7CC8800BB552D /* Utilities */,
 				6C5116A014C7CC8700BB552D /* Controllers */,
+				6C842A6B14C8093A003C7DDA /* Images */,
 				6C51169214C7CC4D00BB552D /* AppDelegate.h */,
 				6C51169314C7CC4D00BB552D /* AppDelegate.m */,
 				6C51169514C7CC4D00BB552D /* MainStoryboard.storyboard */,
@@ -99,6 +109,8 @@
 		6C5116A014C7CC8700BB552D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6C842A2E14C7E166003C7DDA /* HospitalsController.h */,
+				6C842A2F14C7E166003C7DDA /* HospitalsController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -113,8 +125,19 @@
 		6C5116A214C7CC8B00BB552D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				6C842A6814C802CD003C7DDA /* Position.h */,
+				6C842A6914C802CD003C7DDA /* Position.m */,
+				6C842A3314C7F00A003C7DDA /* Hospital.h */,
+				6C842A3414C7F00A003C7DDA /* Hospital.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		6C842A6B14C8093A003C7DDA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +204,9 @@
 			files = (
 				6C51169014C7CC4D00BB552D /* main.m in Sources */,
 				6C51169414C7CC4D00BB552D /* AppDelegate.m in Sources */,
+				6C842A3014C7E166003C7DDA /* HospitalsController.m in Sources */,
+				6C842A3514C7F00A003C7DDA /* Hospital.m in Sources */,
+				6C842A6A14C802CD003C7DDA /* Position.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +318,7 @@
 				6C51169F14C7CC4D00BB552D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
