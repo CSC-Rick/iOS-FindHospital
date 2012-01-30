@@ -34,7 +34,13 @@
                             <outlet property="delegate" destination="w0C-m9-ZPf" id="ViI-Vr-5ab"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Hospitals" id="XY7-Fd-Ow6"/>
+                    <navigationItem key="navigationItem" title="Hospitals" id="XY7-Fd-Ow6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="xP9-Im-0P5">
+                            <connections>
+                                <action selector="RefreshTableView:" destination="w0C-m9-ZPf" id="bNf-3x-zW2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="634" y="-584"/>
@@ -42,15 +48,25 @@
         <scene sceneID="nt5-xY-fdd">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3TQ-KB-26f" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="UYW-Rq-bsd" sceneMemberID="viewController">
+                <viewController id="UYW-Rq-bsd" customClass="MapViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1qB-8x-bOE">
                         <rect key="frame" x="0.0" y="64" width="320" height="367"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="pVl-jT-3P5">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="367"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Hospital Detail" id="WeY-Zz-gUx">
                         <barButtonItem key="backBarButtonItem" title="Back" id="rre-TZ-vB9"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="pVl-jT-3P5" id="xhM-8k-LDg"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="1110" y="-584"/>
@@ -77,7 +93,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQ3-CG-IaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="bmc-kv-ee9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Find Hospital" id="M1n-XD-LKu"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="M1n-XD-LKu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3rs-xf-uRK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -197,7 +213,7 @@
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zb-Xm-7zm" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="Nxu-rp-PDr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Setting" id="X7J-OV-bDd"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="X7J-OV-bDd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8UR-dS-spz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -215,6 +231,15 @@
     <classes>
         <class className="HospitalsController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HospitalsController.h"/>
+            <relationships>
+                <relationship kind="action" name="RefreshTableView:"/>
+            </relationships>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="UIWebView"/>
+            </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

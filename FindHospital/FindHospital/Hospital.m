@@ -15,4 +15,12 @@
 @synthesize position;
 @synthesize image;
 
+- (id)init
+{
+    if (self = [super init]) {
+        self.position = [[Position alloc] init];
+    }
+    return self;
+}
+
 @end
