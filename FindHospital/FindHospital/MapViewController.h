@@ -14,6 +14,7 @@
 @property (retain) Position *currentPosition;
 
 @property (weak, nonatomic) IBOutlet UIWebView *mapView;
+
 - (IBAction)back:(id)sender;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "MapViewController.h"
+#import "Constants.h"
 
 @implementation MapViewController
 @synthesize mapView;
@@ -23,7 +24,6 @@
 
 - (void)didReceiveMemoryWarning   
 {
-    // for test
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     
@@ -44,7 +44,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ditu.google.cn/maps?q=%f,%f",currentPosition.latitude, currentPosition.longitude]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:MapUrl, currentPosition.latitude, currentPosition.longitude]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     self.mapView.delegate = self;
     [self.mapView loadRequest:request];

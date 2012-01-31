@@ -17,10 +17,10 @@
 		6C842A3014C7E166003C7DDA /* HospitalsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C842A2F14C7E166003C7DDA /* HospitalsController.m */; };
 		6C842A3514C7F00A003C7DDA /* Hospital.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C842A3414C7F00A003C7DDA /* Hospital.m */; };
 		6C842A6A14C802CD003C7DDA /* Position.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C842A6914C802CD003C7DDA /* Position.m */; };
-		6C8A5D9614C910AE00B54442 /* HospitalControllerSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8A5D9514C910AE00B54442 /* HospitalControllerSection.m */; };
 		6C8A5D9E14C9417300B54442 /* HospitalInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8A5D9D14C9417300B54442 /* HospitalInfo.m */; };
 		6C9C397E14D3A5F000A593F5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C9C397D14D3A5F000A593F5 /* CoreLocation.framework */; };
 		6C9C398114D3C44400A593F5 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9C398014D3C44400A593F5 /* MapViewController.m */; };
+		6CD673F614D7D3BF003AC4CB /* RequestFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD673F514D7D3BE003AC4CB /* RequestFactory.m */; };
 		6CD8E6B314D63028000FF83C /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD8E69B14D63028000FF83C /* NSObject+SBJson.m */; };
 		6CD8E6B414D63028000FF83C /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD8E69E14D63028000FF83C /* SBJsonParser.m */; };
 		6CD8E6B514D63028000FF83C /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD8E6A014D63028000FF83C /* SBJsonStreamParser.m */; };
@@ -53,13 +53,14 @@
 		6C842A3414C7F00A003C7DDA /* Hospital.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hospital.m; sourceTree = "<group>"; };
 		6C842A6814C802CD003C7DDA /* Position.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Position.h; sourceTree = "<group>"; };
 		6C842A6914C802CD003C7DDA /* Position.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Position.m; sourceTree = "<group>"; };
-		6C8A5D9414C910AE00B54442 /* HospitalControllerSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalControllerSection.h; sourceTree = "<group>"; };
-		6C8A5D9514C910AE00B54442 /* HospitalControllerSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalControllerSection.m; sourceTree = "<group>"; };
 		6C8A5D9C14C9417300B54442 /* HospitalInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HospitalInfo.h; sourceTree = "<group>"; };
 		6C8A5D9D14C9417300B54442 /* HospitalInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HospitalInfo.m; sourceTree = "<group>"; };
 		6C9C397D14D3A5F000A593F5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6C9C397F14D3C44300A593F5 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		6C9C398014D3C44400A593F5 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		6CD673F214D7CFAD003AC4CB /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		6CD673F414D7D3BE003AC4CB /* RequestFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestFactory.h; sourceTree = "<group>"; };
+		6CD673F514D7D3BE003AC4CB /* RequestFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestFactory.m; sourceTree = "<group>"; };
 		6CD8E69A14D63028000FF83C /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		6CD8E69B14D63028000FF83C /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		6CD8E69C14D63028000FF83C /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -171,6 +172,9 @@
 		6C5116A114C7CC8800BB552D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				6CD673F214D7CFAD003AC4CB /* Constants.h */,
+				6CD673F414D7D3BE003AC4CB /* RequestFactory.h */,
+				6CD673F514D7D3BE003AC4CB /* RequestFactory.m */,
 				6C8A5D9C14C9417300B54442 /* HospitalInfo.h */,
 				6C8A5D9D14C9417300B54442 /* HospitalInfo.m */,
 			);
@@ -184,8 +188,6 @@
 				6C842A6914C802CD003C7DDA /* Position.m */,
 				6C842A3314C7F00A003C7DDA /* Hospital.h */,
 				6C842A3414C7F00A003C7DDA /* Hospital.m */,
-				6C8A5D9414C910AE00B54442 /* HospitalControllerSection.h */,
-				6C8A5D9514C910AE00B54442 /* HospitalControllerSection.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -296,7 +298,6 @@
 				6C842A3014C7E166003C7DDA /* HospitalsController.m in Sources */,
 				6C842A3514C7F00A003C7DDA /* Hospital.m in Sources */,
 				6C842A6A14C802CD003C7DDA /* Position.m in Sources */,
-				6C8A5D9614C910AE00B54442 /* HospitalControllerSection.m in Sources */,
 				6C8A5D9E14C9417300B54442 /* HospitalInfo.m in Sources */,
 				6C9C398114D3C44400A593F5 /* MapViewController.m in Sources */,
 				6CD8E6B314D63028000FF83C /* NSObject+SBJson.m in Sources */,
@@ -311,6 +312,7 @@
 				6CD8E6BC14D63028000FF83C /* SBJsonTokeniser.m in Sources */,
 				6CD8E6BD14D63028000FF83C /* SBJsonUTF8Stream.m in Sources */,
 				6CD8E6BE14D63028000FF83C /* SBJsonWriter.m in Sources */,
+				6CD673F614D7D3BF003AC4CB /* RequestFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

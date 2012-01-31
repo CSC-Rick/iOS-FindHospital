@@ -8,9 +8,9 @@
 
 #import "HospitalsController.h"
 #import "Hospital.h"
-#import "HospitalControllerSection.h"
 #import "HospitalInfo.h"
 #import "MapViewController.h"
+#import "Constants.h"
 
 
 @implementation HospitalsController 
@@ -96,10 +96,10 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     if (section == 0) {
-        return @"Current position";
+        return SectionName1;
     }
     else {
-        return @"Search results";
+        return SectionName2;
     }
 }
 
@@ -115,10 +115,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HospitalCellIdentifier"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:HospitalCellIdentifier];
     if (indexPath.section == 0) {
         if (currentPosition != nil) {
-            cell.textLabel.text = [NSString stringWithFormat:@"%.1f\u00B0 , %.1f\u00B0", currentPosition.longitude, currentPosition.latitude];
+            cell.textLabel.text = [NSString stringWithFormat:PositionStringFormat, currentPosition.longitude, currentPosition.latitude];
             //cell.accessoryType = UITableViewCellAccessoryNone;
             //cell.selectionStyle = UITableViewCellSelectionStyleNone;
             //cell.userInteractionEnabled = NO;
@@ -128,8 +128,8 @@
     else {  
         Hospital *hospital = [dataSource objectAtIndex:indexPath.row];
         if (hospital != nil) {
-            cell.textLabel.text = [NSString stringWithFormat:@"%@ %.1f\u00B0 , %.1f\u00B0", hospital.name, 
-                                   hospital.position.longitude, hospital.position.latitude];
+            cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", hospital.name, 
+                                   [NSString stringWithFormat:PositionStringFormat, hospital.position.longitude, hospital.position.latitude]];
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         }
     }

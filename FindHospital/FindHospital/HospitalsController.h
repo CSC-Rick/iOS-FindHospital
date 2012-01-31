@@ -18,6 +18,7 @@
     CLLocationManager *lm;
     HospitalInfo *hospitalInfo;
 }
+
 - (IBAction)RefreshTableView:(id)sender;
 
 @end
