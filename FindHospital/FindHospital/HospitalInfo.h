@@ -10,11 +10,7 @@
 #import "Position.h"
 #import <CoreLocation/CoreLocation.h>
 
-@interface HospitalInfo : NSObject <NSXMLParserDelegate>
-{
-    BOOL storingChars;
-    NSString *jsonString;
-}
+@interface HospitalInfo : NSObject
 
 - (NSArray *)GetHospitalsByPosition:(Position *)position;
 

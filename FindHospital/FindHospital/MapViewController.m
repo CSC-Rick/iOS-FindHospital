@@ -43,8 +43,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ditu.google.cn/maps?q=%f,%f",currentPosition.latitude, currentPosition.longitude]];
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.baidu.com"]];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://ditu.google.cn/maps?q=%f,%f",currentPosition.latitude, currentPosition.longitude]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     self.mapView.delegate = self;
     [self.mapView loadRequest:request];
@@ -63,16 +62,6 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
-{
-    NSLog(error);
-}
-
-- (void)webViewDidStartLoad:(UIWebView *)webView
-{
-    NSLog(@"start....");
 }
 
 @end
