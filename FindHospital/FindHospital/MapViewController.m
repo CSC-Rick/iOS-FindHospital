@@ -21,8 +21,9 @@
     return self;
 }
 
-- (void)didReceiveMemoryWarning
+- (void)didReceiveMemoryWarning   
 {
+    // for test
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     
