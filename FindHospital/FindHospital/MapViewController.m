@@ -23,6 +23,7 @@
 
 - (void)didReceiveMemoryWarning   
 {
+    // a v for test
     // for test
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
